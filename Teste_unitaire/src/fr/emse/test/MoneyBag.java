@@ -29,4 +29,16 @@ class MoneyBag {
 			}
 		}
 	}
+	
+	@Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        MoneyBag other = (MoneyBag) obj;
+        return fMonies.equals(other.fMonies);
+    }
 }
